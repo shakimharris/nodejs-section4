@@ -1,4 +1,4 @@
-const EventEmitter = require("events");
+import EventEmitter from "events";
 
 const myEvent = new EventEmitter();
 
@@ -10,4 +10,4 @@ myEvent.on("newSale", () => {
   console.log("There was another sale!");
 });
 
-myEvent.emit("newSale");
+myEvent.emit("newSale", 9);
